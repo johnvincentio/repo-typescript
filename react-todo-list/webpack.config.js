@@ -14,7 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'ts-loader'
       },
       {
         enforce: 'pre',
@@ -27,9 +27,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {
-              minimize: true
-            }
+						options: { modules: true, esModule: true }
           },
           'sass-loader'
         ]
