@@ -14,6 +14,8 @@ import FavPage from './FavPage';
 
 import App from './App';
 
+import './styles.scss';
+
 // const RouterPage = (props: { pageComponent: JSX.Element } & RouteComponentProps) => props.pageComponent;
 
 document.addEventListener('DOMContentLoaded', () => {
