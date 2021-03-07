@@ -1,4 +1,3 @@
-//
 
 export type Dispatch = React.Dispatch<IAction>;
 
