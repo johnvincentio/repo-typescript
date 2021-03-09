@@ -12,15 +12,15 @@
 		"jest"
   ],
   "extends": [
-    "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
 		"airbnb-typescript",
     "airbnb/hooks",
-    "plugin:jest/recommended",
     "prettier",
     "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+		"eslint:recommended",
+		"plugin:jest/recommended"
   ],
 	"env": {
     "browser": true,

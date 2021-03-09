@@ -117,6 +117,11 @@ npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslin
   ]
 }
 ```
-	
+
+```
+		"sourceType": "module",
+    "createDefaultProgram": true
+```
+
 
 
