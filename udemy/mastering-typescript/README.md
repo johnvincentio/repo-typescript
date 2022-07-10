@@ -19,4 +19,29 @@ tsc -v
 
 [TypeScript Playground](https://www.typescriptlang.org/play)
 
+Compile all in current folder
+
+```
+tsc
+```
+
+```
+tsc --init
+```
+
+creates `tsconfig.json`
+
+```
+tsc index.ts
+```
+
+
+```
+tsc --watch index.ts
+```
+
+```
+tsc --watch
+```
+
 

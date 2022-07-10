@@ -56,5 +56,6 @@ Interfaces:
 1. describe the shape of an object.
 2. can open and modiy an interface.
 3. can extends (inherit) other interfaces.
-
 */
+
+
