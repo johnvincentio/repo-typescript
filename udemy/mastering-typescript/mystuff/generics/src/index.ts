@@ -1,9 +1,11 @@
+
 // Providing a type to querySelector:
 const inputEl = document.querySelector<HTMLInputElement>("#username")!;
 console.dir(inputEl);
 inputEl.value = "Hacked!";
 
 const btn = document.querySelector<HTMLButtonElement>(".btn")!;
+
 
 // Without Generics...Lots of Repetition!
 function numberIdentity(item: number): number {
@@ -28,6 +30,16 @@ function identity<T>(item: T): T {
 identity<number>(7);
 identity<string>("hello");
 
+interface Cat {
+  name: string,
+  breed: string
+}
+
+identity<Cat>({ name: `a`, breed: `b` });
+
+
+
+
 function getRandomElement<T>(list: T[]): T {
   const randIdx = Math.floor(Math.random() * list.length);
   return list[randIdx];
@@ -36,6 +48,9 @@ function getRandomElement<T>(list: T[]): T {
 console.log(getRandomElement<string>(["a", "b", "c"]));
 getRandomElement<number>([5, 6, 21, 354, 567, 234, 654]);
 getRandomElement([1, 2, 3, 4]);
+
+
+
 
 // Generics With Constraints:
 function merge<T extends object, U extends object>(object1: T, object2: U) {
@@ -46,6 +61,7 @@ function merge<T extends object, U extends object>(object1: T, object2: U) {
 }
 
 const comboObj = merge({ name: "colt" }, { pets: ["blue", "elton"] });
+console.log('comboObj ', comboObj);
 console.log(merge({ name: "Colt" }, { num: 9 }));
 merge<{ name: string }, { pets: string[] }>(
   { name: "colt" },
@@ -65,7 +81,7 @@ function printDoubleLength<T extends Lengthy>(thing: T): number {
 // }
 
 printDoubleLength("asdasd");
-printDoubleLength(234); //Not allowed!
+// printDoubleLength(234); //Not allowed!
 
 function makeEmptyArray<T = number>(): T[] {
   return [];
