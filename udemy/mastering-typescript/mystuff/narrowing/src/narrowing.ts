@@ -1,3 +1,4 @@
+
 // Typeof Narrowing:
 function triple(value: number | string) {
   if (typeof value === "string") {
@@ -9,9 +10,10 @@ function triple(value: number | string) {
 const el = document.getElementById("idk");
 if (el) {
   el;
-} else {
+} else {    // type is null
   el;
 }
+
 
 // Truthiness Narrowing:
 const printLetters = (word?: string) => {
@@ -24,12 +26,19 @@ const printLetters = (word?: string) => {
   }
 };
 
+
+
 // EQUALITY NARROWING
 function someDemo(x: string | number, y: string | boolean) {
   if (x === y) {
     x.toUpperCase();
   }
 }
+
+// console.log('test1; ', someDemo(3, false));
+// console.log('test2; ', someDemo('1', '2'));
+
+
 
 // IN Operator Narrowing
 interface Movie {
@@ -55,6 +64,8 @@ console.log(
   getRuntime({ title: "Spongebob", numEpisodes: 80, episodeDuration: 30 })
 );
 
+
+
 // Instanceof Narrowing:
 function printFullDate(date: string | Date) {
   if (date instanceof Date) {
@@ -63,6 +74,7 @@ function printFullDate(date: string | Date) {
     console.log(new Date(date).toUTCString());
   }
 }
+
 
 // Instanceof Narrowing:
 class User {
@@ -74,11 +86,12 @@ class Company {
 
 function printName(entity: User | Company) {
   if (entity instanceof User) {
-    entity;
+    entity;         // type User
   } else {
-    entity;
+    entity;         // type Company
   }
 }
+
 
 // Type Predicates
 
@@ -92,18 +105,19 @@ interface Dog {
 }
 
 function isCat(animal: Cat | Dog): animal is Cat {
-  return (animal as Cat).numLives !== undefined;
+  return (animal as Cat).numLives !== undefined;    // return true or false
 }
 
 function makeNoise(animal: Cat | Dog): string {
   if (isCat(animal)) {
-    animal;
+    animal;     // type Cat
     return "Meow";
   } else {
-    animal;
+    animal;     // type Dog
     return "Woof!";
   }
 }
+
 
 // Discriminated Unions
 interface Rooster {
