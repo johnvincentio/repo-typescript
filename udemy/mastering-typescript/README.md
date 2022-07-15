@@ -54,3 +54,8 @@ npm create-react-app my-app --template typescript
 
 [ReactTypeScript](https://reactjs.org/docs/static-type-checking.html#typescript)
 
+## References
+
+[TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
+
+
