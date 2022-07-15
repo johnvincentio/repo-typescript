@@ -1,6 +1,4 @@
-
-import _ from "lodash"; //this will cause an error in the browser!
-
+import _ from "lodash";
 export function add(x: number, y: number) {
   return _.add(x, y);
 }
