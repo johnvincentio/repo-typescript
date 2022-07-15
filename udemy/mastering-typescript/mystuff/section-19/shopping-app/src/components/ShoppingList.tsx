@@ -1,9 +1,11 @@
+
 import React from "react";
 import Item from "../models/item";
 
 interface ShoppingListProps {
   items: Item[];
 }
+
 export default function ShoppingList({
   items,
 }: ShoppingListProps): JSX.Element {

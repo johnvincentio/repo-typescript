@@ -44,4 +44,13 @@ tsc --watch index.ts
 tsc --watch
 ```
 
+## Create React App with TypeScript
+
+```
+npm create-react-app my-app --template typescript
+```
+
+## Adding TypeScript
+
+[ReactTypeScript](https://reactjs.org/docs/static-type-checking.html#typescript)
 
