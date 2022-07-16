@@ -1,4 +1,3 @@
-
 [TypeScript](https://www.typescriptlang.org/)
 
 ## Install TypeScript
@@ -35,7 +34,6 @@ creates `tsconfig.json`
 tsc index.ts
 ```
 
-
 ```
 tsc --watch index.ts
 ```
@@ -56,6 +54,10 @@ npm create-react-app my-app --template typescript
 
 ## References
 
+[React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app)
+
+[Advanced Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/advanced/intro/)
+
 [TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
 
-
+[Github Search](https://github.com/search?q=typescript-cheatsheet)
